@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 
 class Besede():
     def __init__(self, master):
@@ -6,20 +7,8 @@ class Besede():
 #velikost 'platna'
         self.canvas = Canvas(master, width=300, height=300)
         self.canvas.grid(row=2, column=0)
-        
-##začetni meni : vnesi ime igralca
-        
 
-
-
-
-
-##navodila, tipka start + številka levela (ponavlja se po vsakem levelu)
-
-
-
-
-
+##navodila + številka levela 
 
 ## gumb escape prekine in ugasne igro
 
@@ -35,9 +24,10 @@ class Besede():
 		
 #self.beseda = beseda, ki jo bomo prikazali - iz datoteke dobimo seznam
 #besed, ki jih bomo prikazovali.
-        Label(master, text="self.beseda", font=("Helvetica", 32)).grid(row=2)
+        colors = ["red", "orange", "yellow", "green", "blue", "violet"]
+        Label(master, text="self.beseda", font=("Helvetica", 32), color=random.choice(colors)).grid(row=2)
 
-
+# ko igralec vpiše besedilo, se naša beseda zamenja
 
 
         
